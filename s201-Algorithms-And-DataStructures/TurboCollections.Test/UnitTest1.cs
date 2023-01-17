@@ -42,4 +42,103 @@ public class MathsTests
 
         
     }
+
+
+    [Test]
+    public void TurboLinkStackAddValues()
+    {
+        TurboLinkedStack<int> stack = new TurboLinkedStack<int>();
+        List<int> controlList = new List<int>();
+        
+        //Is formatting your code like this allowed?
+        //I like it :)
+        stack.Push(5); controlList.Add(5);
+        stack.Push(8); controlList.Add(8);
+        stack.Push(10); controlList.Add(10);
+        List<int> stackOutput = new List<int>();
+        foreach (var number in stack)
+        {
+            Console.WriteLine(number);
+            stackOutput.Add(number);
+        }
+        stackOutput.Reverse();
+        
+        Assert.That(controlList, Is.EqualTo(stackOutput));
+    }
+    
+    [Test]
+    public void TurboLinkStackPopValues()
+    {
+        TurboLinkedStack<int> stack = new TurboLinkedStack<int>();
+        List<int> controlList = new List<int>();
+        stack.Push(2); controlList.Add(2);
+        stack.Push(3); controlList.Add(3);
+        stack.Push(5000); controlList.Add(5000);
+        //push a value and then pop it before adding more stuff on top
+        stack.Push(-54);
+        stack.Pop();
+        
+        stack.Push(40); controlList.Add(40);
+        stack.Push(29); controlList.Add(29);
+        stack.Pop();
+        stack.Push(29); //pop value before adding it again
+        stack.Push(-1);
+        stack.Pop(); //pop last value to see if that messes up the linking
+        List<int> stackOutput = new List<int>();
+        foreach (var number in stack)
+        {
+            Console.WriteLine(number);
+            stackOutput.Add(number);
+        }
+        stackOutput.Reverse();
+        
+        Assert.That(controlList, Is.EqualTo(stackOutput));
+    }
+    
+    [Test]
+    public void TurboLinkStackClearValues()
+    {
+        TurboLinkedStack<int> stack = new TurboLinkedStack<int>();
+        List<int> controlList = new List<int>();
+        
+        stack.Push(999);
+        stack.Push(0);
+        stack.Push(-1_000_000); //Write a bunch o' crap to the stack
+        
+        stack.Clear(); //Clear it all away
+        
+        stack.Push(20); controlList.Add(20); //Add real values
+        stack.Push(18); controlList.Add(18);
+        stack.Push(100); controlList.Add(100);
+        List<int> stackOutput = new List<int>();
+        foreach (var number in stack)
+        {
+            Console.WriteLine(number);
+            stackOutput.Add(number);
+        }
+        stackOutput.Reverse();
+        
+        Assert.That(controlList, Is.EqualTo(stackOutput));
+    }
+    
+    [Test]
+    public void TurboLinkStackPeek()
+    {
+        TurboLinkedStack<int> stack = new TurboLinkedStack<int>();
+        List<int> controlList = new List<int>();
+        
+        stack.Push(3);
+        stack.Push(6);
+        stack.Push(12);
+        stack.Pop();
+        List<int> stackOutput = new List<int>();
+        foreach (var number in stack)
+        {
+            Console.WriteLine(number);
+            stackOutput.Add(number);
+        }
+        stackOutput.Reverse();
+        
+        Assert.That(stack.Peek(), Is.EqualTo(6));
+    }
 }

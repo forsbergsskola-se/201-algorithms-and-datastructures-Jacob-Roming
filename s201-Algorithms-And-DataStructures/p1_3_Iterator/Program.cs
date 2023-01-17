@@ -21,7 +21,7 @@ while (enumerator.MoveNext())
     total += (int)enumerator.Current;
 }
 Console.WriteLine("The total is: " + total);
-List<int> oddNumbers = TurboMaths.GetOddNumbersList(3);
+List<int> oddNumbers = TurboMaths.GetOddNumbersList(2_100_000_000);
 for (int i = 0; i < oddNumbers.Count; i++)
 {
     Console.WriteLine(oddNumbers[i]);
@@ -29,6 +29,6 @@ for (int i = 0; i < oddNumbers.Count; i++)
 
 //Console.WriteLine(TurboMaths.GetOddNumbers(total));
 
-foreach(var number in TurboMaths.GetOddNumbers(1000000000)) {
+foreach(var number in TurboMaths.GetOddNumbers(2_000_000_000)) {
     System.Console.WriteLine(number);
 }
