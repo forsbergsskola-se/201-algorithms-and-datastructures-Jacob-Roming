@@ -2,15 +2,10 @@
 
 namespace TurboCollections;
 
-public class TurboLinkedQueue<T> : ITurboQueue<T> {
+public class TurboQueue<T> : ITurboQueue<T>
+{
     // This class is VERY similar to the TurboLinkedStack
-    class Node {
-        public T Value;
-        // But we store the Next Node for each Node instead.
-        public Node Next;
-    }
-    // Also, we store the first instead of the last Node. First Come, First Serve.
-    Node FirstNode;
+    private static T[] values;
 
     public int Count { get; set; }
 
@@ -19,22 +14,29 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
         // No other choice but looping through your Nodes until you reach the end.
         // You know that you've reached the end, if the current Node's Next Node is null.
         // Then, you assign a new Node containing the value to the current node's Next field.
-        if (FirstNode != null)
+        if (values != null)
         {
-            Node nextNode = FirstNode;
-            while (nextNode.Next != null)
+            if (values.Length >= Count - 1)
             {
-                nextNode = nextNode.Next;
-            }
+                T[] old = values;
+                values = new T[values.Length * 2];
+                for (int i = 0; i < old.Length; i++)
+                {
+                    values[i] = old[i];
+                }
 
-            Node newNode = new Node();
-            newNode.Value = value;
-            nextNode.Next = newNode;
+                values[Count] = value;
+            }
+            else
+            {
+                values[Count] = value;
+            }
         }
         else
         {
-            FirstNode = new Node();
-            FirstNode.Value = value;
+            values = new T[1];
+            values[0] = value;
+            
         }
 
         Count += 1;
@@ -44,29 +46,30 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
 
     public T Peek()
     {
-        return FirstNode.Value;
+        return values[0];
     }
 
     public T Dequeue()
     {
-        T toReturn = FirstNode.Value;
-        FirstNode = FirstNode.Next;
+        T toReturn = values[0];
+        for (int i = 0; i < Count - 1; i++)
+        {
+            values[i] = values[i + 1];
+        }
         Count -= 1;
         return toReturn;
     }
 
     public void Clear()
     {
-        FirstNode = null;
+        values = null;
         Count = 0;
     }
-
-    // Everything else is super similar to the TurboLinkedStack!
     public IEnumerator<T> GetEnumerator()
     {
         var enumerator = new Enumerator(){
-            CurrentNode = null,
-            InitialNode = FirstNode
+            CurrentNode = 0,
+            NumberOfElements = Count
             // This might look confusing. But remember? Last In. First Out.
             //FirstNode = 
         };
@@ -78,26 +81,28 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
         return GetEnumerator();
     }
     class Enumerator : IEnumerator<T> {
-        public Node CurrentNode;
-        public Node InitialNode;
+        public int CurrentNode;
+        public int NumberOfElements;
 
         public bool MoveNext(){
             // if we don't have a current node, we start with the first node
-            if(CurrentNode == null){
-                CurrentNode = InitialNode;
-            } else
+            if (CurrentNode != NumberOfElements)
             {
-                CurrentNode = CurrentNode.Next;
-                // Assign the Current Node's Previous Node to be the Current Node.
+                CurrentNode++;
+                return true;
             }
-            return CurrentNode != null;
+            else
+            {
+                return false;
+            }
             // Return, whether there is a CurrentNode. Else, we have reached the end of the Stack, there's no more Elements.
         }
 
         public T Current {
             get{
                 // Return the Current Node's Value.
-                return CurrentNode.Value;
+                Console.WriteLine("Trying to access value " + (CurrentNode - 1));
+                return values[CurrentNode - 1];
             }
         }
 
@@ -106,7 +111,7 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
 
         public void Reset() {
             // Look at Move. How can you make sure that this Enumerator starts over again?
-            CurrentNode = InitialNode;
+            CurrentNode = 0;
         }
 
         
@@ -117,15 +122,4 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
         }
     }
 }
-public interface ITurboQueue<T> : IEnumerable<T> {
-    // returns the current amount of items contained in the stack.
-    int Count { get; set; }
-    // adds one item to the back of the queue.
-    void Enqueue(T item);
-    // returns the item in the front of the queue without removing it.
-    T Peek();
-    // returns the item in the front of the queue and removes it at the same time.
-    T Dequeue();
-    // removes all items from the queue.
-    void Clear();
-}
+

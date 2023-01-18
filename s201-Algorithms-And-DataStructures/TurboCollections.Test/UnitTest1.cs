@@ -266,4 +266,25 @@ public class MathsTests
         
         Assert.That(controlList, Is.EqualTo(stackOutput));
     }
+    
+    public void TurboStackDeQueue()
+    {
+        TurboStack<int> stack = new TurboStack<int>();
+        List<int> controlList = new List<int>();
+        
+        //Is formatting your code like this allowed?
+        //I like it :)
+        stack.Push(5); controlList.Add(5);
+        stack.Push(8); controlList.Add(8);
+        stack.Push(10); controlList.Add(10);
+        List<int> stackOutput = new List<int>();
+        foreach (var number in stack)
+        {
+            Console.WriteLine(number);
+            stackOutput.Add(number);
+        }
+        stackOutput.Reverse();
+        
+        Assert.That(controlList, Is.EqualTo(stackOutput));
+    }
 }
