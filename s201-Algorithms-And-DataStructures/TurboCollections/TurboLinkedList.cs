@@ -21,13 +21,29 @@ public class TurboLinkedList<T> : ITurboList<T> {
             FirstNode = new Node();
             FirstNode.Value = value;
         }
+        else if (Count == 1)
+        {
+            Node newNode = new Node();
+            newNode.Value = value;
+            FirstNode.Next = newNode;
+        }
         else
         {
-            Node lastNode = FirstNode;
-            while (lastNode.Next != null)
+            Node newNode = new Node();
+            newNode.Value = value;
+
+            Node currentNode = FirstNode;
+            for (int i = 0; i < Count; i++)
             {
-                lastNode = lastNode.Next;
+                if (currentNode.Next != null)
+                {
+                    currentNode = currentNode.Next;
+                }
+
             }
+
+            currentNode.Next = newNode;
+
         }
 
         Count++;
@@ -65,7 +81,6 @@ public class TurboLinkedList<T> : ITurboList<T> {
     {
         Node targetNode = FirstNode;
         Node nodeBefore = FirstNode;
-        //This shit will break if you try to remove node 0
         if (index == 0)
         {
             FirstNode = FirstNode.Next;
@@ -113,10 +128,13 @@ public class TurboLinkedList<T> : ITurboList<T> {
     public int IndexOf(T item)
     {
         Node targetNode = FirstNode;
+        FirstNode.Next.ToString();
         for (int i = 0; i < Count; i++)
         {
-            if (targetNode.Value != null)
+            Console.WriteLine("First node is" + FirstNode);
+            if (targetNode.Value != null && targetNode != null)
             {
+                Console.WriteLine("We are checking");
                 if (targetNode.Value.Equals(item))
                 {
                     return i;
@@ -128,6 +146,7 @@ public class TurboLinkedList<T> : ITurboList<T> {
             {
                 targetNode = targetNode.Next;
             }
+
         }
 
         return -1;
@@ -139,7 +158,7 @@ public class TurboLinkedList<T> : ITurboList<T> {
         Node lastNode = FirstNode;
         for (int i = 0; i < Count; i++)
         {
-            lastNode = targetNode;
+            
             if (targetNode.Value != null)
             {
                 if (targetNode.Value.Equals(item))
@@ -158,6 +177,7 @@ public class TurboLinkedList<T> : ITurboList<T> {
             
             if (targetNode.Next != null)
             {
+                lastNode = targetNode;
                 targetNode = targetNode.Next;
             }
         }
@@ -165,7 +185,10 @@ public class TurboLinkedList<T> : ITurboList<T> {
 
     public void AddRange(IEnumerable<T> items)
     {
-        throw new NotImplementedException();
+        foreach (var variable in items)
+        {
+            Add(variable);
+        }
     }
 
     T Get(int index)
@@ -181,7 +204,7 @@ public class TurboLinkedList<T> : ITurboList<T> {
             return currentNode.Value;
         }
 
-        return FirstNode.Value; //This is an awful default value
+        return default;
     }
 
 
