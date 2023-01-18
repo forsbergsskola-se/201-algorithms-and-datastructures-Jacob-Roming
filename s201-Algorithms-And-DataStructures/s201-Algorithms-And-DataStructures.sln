@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p1_3_Iterator", "p1_3_Itera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue test project", "Queue test project\Queue test project.csproj", "{68A4EEEF-E00D-4133-99E1-A3B9FDD05800}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListTestProject", "ListTestProject\ListTestProject.csproj", "{F293FEB6-15C8-4B64-9315-9687A4787F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{68A4EEEF-E00D-4133-99E1-A3B9FDD05800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68A4EEEF-E00D-4133-99E1-A3B9FDD05800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68A4EEEF-E00D-4133-99E1-A3B9FDD05800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
