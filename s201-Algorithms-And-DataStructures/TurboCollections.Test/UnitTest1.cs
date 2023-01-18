@@ -267,7 +267,8 @@ public class MathsTests
         Assert.That(controlList, Is.EqualTo(stackOutput));
     }
     
-    public void TurboStackDeQueue()
+    [Test]
+    public void TurboStackEnumeration()
     {
         TurboStack<int> stack = new TurboStack<int>();
         List<int> controlList = new List<int>();
@@ -280,7 +281,6 @@ public class MathsTests
         List<int> stackOutput = new List<int>();
         foreach (var number in stack)
         {
-            Console.WriteLine(number);
             stackOutput.Add(number);
         }
         stackOutput.Reverse();

@@ -5,7 +5,7 @@ namespace TurboCollections;
 public class TurboQueue<T> : ITurboQueue<T>
 {
     // This class is VERY similar to the TurboLinkedStack
-    private static T[] values;
+    private T[] values;
 
     public int Count { get; set; }
 
@@ -46,11 +46,19 @@ public class TurboQueue<T> : ITurboQueue<T>
 
     public T Peek()
     {
+        if (Count == 0)
+        {
+            throw new Exception("There is no value to peek at");
+        }
         return values[0];
     }
 
     public T Dequeue()
     {
+        if (Count == 0)
+        {
+            throw new Exception("There are no values to dequeue");
+        }
         T toReturn = values[0];
         for (int i = 0; i < Count - 1; i++)
         {
@@ -69,7 +77,8 @@ public class TurboQueue<T> : ITurboQueue<T>
     {
         var enumerator = new Enumerator(){
             CurrentNode = 0,
-            NumberOfElements = Count
+            NumberOfElements = Count,
+            valuesArray = values
             // This might look confusing. But remember? Last In. First Out.
             //FirstNode = 
         };
@@ -83,6 +92,7 @@ public class TurboQueue<T> : ITurboQueue<T>
     class Enumerator : IEnumerator<T> {
         public int CurrentNode;
         public int NumberOfElements;
+        public T[] valuesArray;
 
         public bool MoveNext(){
             // if we don't have a current node, we start with the first node
@@ -102,7 +112,7 @@ public class TurboQueue<T> : ITurboQueue<T>
             get{
                 // Return the Current Node's Value.
                 Console.WriteLine("Trying to access value " + (CurrentNode - 1));
-                return values[CurrentNode - 1];
+                return valuesArray[CurrentNode - 1];
             }
         }
 

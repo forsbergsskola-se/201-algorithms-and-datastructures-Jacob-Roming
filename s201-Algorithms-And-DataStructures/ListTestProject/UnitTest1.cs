@@ -98,6 +98,23 @@ public class Tests
         Assert.That(outputList, Is.EqualTo(controlList));
     }
     
+    [Test]
+    public void EnumerationTest()
+    {
+        TurboLinkedList<int> testList = new TurboLinkedList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        testList.Add(30); controlList.Add(30);
+        testList.Add(40); controlList.Add(40);
+        testList.Add(50); controlList.Add(50);
+
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
+        Assert.That(outputList, Is.EqualTo(controlList));
+    }
+    
      [Test]
     public void UnlinkedIndexofTest()
     {
@@ -184,6 +201,23 @@ public class Tests
         outputList.Add(testList.Contains(1));
         outputList.Add(testList.Contains(999));
         
+        Assert.That(outputList, Is.EqualTo(controlList));
+    }
+
+    [Test]
+    public void UnlinkedEnumerationTest()
+    {
+        TurboList<int> testList = new TurboList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        testList.Add(30); controlList.Add(30);
+        testList.Add(40); controlList.Add(40);
+        testList.Add(50); controlList.Add(50);
+
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
         Assert.That(outputList, Is.EqualTo(controlList));
     }
     

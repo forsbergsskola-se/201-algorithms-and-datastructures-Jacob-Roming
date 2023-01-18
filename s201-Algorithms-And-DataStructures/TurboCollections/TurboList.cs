@@ -138,7 +138,7 @@ public class TurboList<T> : ITurboList<T> {
     public IEnumerator<T> GetEnumerator()
     {
         var enumerator = new Enumerator(){
-            CurrentNode = 0,
+            CurrentNode = -1,
             // This might look confusing. But remember? Last In. First Out.
             valuesArray = values,
             MaxValue = Count
@@ -166,7 +166,7 @@ public class TurboList<T> : ITurboList<T> {
                 // Assign the Current Node's Previous Node to be the Current Node.
             }
 
-            return CurrentNode != MaxValue - 1;
+            return CurrentNode != MaxValue;
             // Return, whether there is a CurrentNode. Else, we have reached the end of the Stack, there's no more Elements.
         }
 
@@ -182,7 +182,7 @@ public class TurboList<T> : ITurboList<T> {
 
         public void Reset() {
             // Look at Move. How can you make sure that this Enumerator starts over again?
-            CurrentNode = 0;
+            CurrentNode = -1;
         }
 
         

@@ -4,8 +4,8 @@ namespace TurboCollections;
 
 public class TurboStack<T> : IEnumerable<T>
 {
-    private static T[] data;
-    private static int dataLength = 0;
+    private T[] data;
+    private int dataLength = 0;
     public void Push(T value){
         if (data == null)
         {
@@ -34,6 +34,10 @@ public class TurboStack<T> : IEnumerable<T>
 
     public T Pop()
     {
+        if (dataLength == 0)
+        {
+            throw new Exception("There is no data to pop");
+        }
         T toReturn;
         
         toReturn = data[dataLength-1];
@@ -45,6 +49,10 @@ public class TurboStack<T> : IEnumerable<T>
 
     public T Peek()
     {
+        if (dataLength == 0)
+        {
+            throw new Exception("There is no data to peek at");
+        }
         return data[dataLength - 1];
     }
     
@@ -52,6 +60,8 @@ public class TurboStack<T> : IEnumerable<T>
     {
         var enumerator = new Enumerator(){
             CurrentNode = dataLength,
+            dataArray = data,
+            dataLength = dataLength
             // This might look confusing. But remember? Last In. First Out.
            // FirstNode = LastNode
         };
@@ -64,6 +74,8 @@ public class TurboStack<T> : IEnumerable<T>
     }
     class Enumerator : IEnumerator<T> {
         public int CurrentNode;
+        public T[] dataArray;
+        public int dataLength;
 
         public bool MoveNext(){
             // if we don't have a current node, we start with the first node
@@ -81,7 +93,7 @@ public class TurboStack<T> : IEnumerable<T>
         public T Current {
             get{
                 // Return the Current Node's Value.
-                return data[CurrentNode ];
+                return dataArray[CurrentNode];
             }
         }
 

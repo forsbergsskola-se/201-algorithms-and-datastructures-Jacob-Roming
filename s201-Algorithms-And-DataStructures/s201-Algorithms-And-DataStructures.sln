@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue test project", "Queue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListTestProject", "ListTestProject\ListTestProject.csproj", "{F293FEB6-15C8-4B64-9315-9687A4787F14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyQueue", "SpotifyQueue\SpotifyQueue.csproj", "{88399922-FDB0-43DD-A4B2-046F2F7933DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F293FEB6-15C8-4B64-9315-9687A4787F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88399922-FDB0-43DD-A4B2-046F2F7933DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88399922-FDB0-43DD-A4B2-046F2F7933DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88399922-FDB0-43DD-A4B2-046F2F7933DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88399922-FDB0-43DD-A4B2-046F2F7933DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
