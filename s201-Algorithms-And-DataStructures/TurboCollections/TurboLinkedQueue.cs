@@ -11,6 +11,7 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
     }
     // Also, we store the first instead of the last Node. First Come, First Serve.
     Node FirstNode;
+    Node LastNode;
 
     public int Count { get; set; }
 
@@ -21,20 +22,16 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
         // Then, you assign a new Node containing the value to the current node's Next field.
         if (FirstNode != null)
         {
-            Node nextNode = FirstNode;
-            while (nextNode.Next != null)
-            {
-                nextNode = nextNode.Next;
-            }
-
             Node newNode = new Node();
             newNode.Value = value;
-            nextNode.Next = newNode;
+            LastNode.Next = newNode;
+            LastNode = newNode;
         }
         else
         {
             FirstNode = new Node();
             FirstNode.Value = value;
+            LastNode = FirstNode;
         }
 
         Count += 1;
@@ -58,6 +55,7 @@ public class TurboLinkedQueue<T> : ITurboQueue<T> {
     public void Clear()
     {
         FirstNode = null;
+        LastNode = null; //I dont think this is needed but it calms the nerves
         Count = 0;
     }
 

@@ -50,6 +50,39 @@ public class Tests
     }
     
     [Test]
+    public void Clear()
+    {
+        TurboLinkedQueue<int> numbers = new TurboLinkedQueue<int>();
+        List<int> controlList = new List<int>();
+        numbers.Enqueue(1); //This stuff will be removed later by the dequeue function
+        numbers.Enqueue(2);
+        numbers.Enqueue(40);
+        numbers.Enqueue(60);
+        numbers.Enqueue(80);    
+        numbers.Clear();
+
+        List<int> outputList = new List<int>();
+        foreach (var number in numbers)
+        {
+            outputList.Add(number);
+        }
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(numbers.Count, Is.EqualTo(0));
+            try
+            {
+                numbers.Dequeue();
+            }
+            catch
+            {
+                Console.WriteLine("We got an exception");
+            }
+        });
+    }
+    
+    [Test]
     public void Count()
     {
         TurboLinkedQueue<int> numbers = new TurboLinkedQueue<int>();
@@ -69,9 +102,12 @@ public class Tests
         {
             outputList.Add(number);
         }
-        controlList.Add(3);
-        outputList.Add(numbers.Count);
-        Assert.That(outputList, Is.EqualTo(controlList));
+         
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(numbers.Count, Is.EqualTo(3));
+        });
     }
     
     [Test]
@@ -115,6 +151,39 @@ public class Tests
     }
     
     [Test]
+    public void ArrayClear()
+    {
+        TurboQueue<int> numbers = new TurboQueue<int>();
+        List<int> controlList = new List<int>();
+        numbers.Enqueue(1); //This stuff will be removed later by the dequeue function
+        numbers.Enqueue(2);
+        numbers.Enqueue(40);  
+        numbers.Enqueue(60);
+        numbers.Enqueue(80);    
+        numbers.Clear();
+
+        List<int> outputList = new List<int>();
+        foreach (var number in numbers)
+        {
+            outputList.Add(number);
+        }
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(numbers.Count, Is.EqualTo(0));
+            try
+            {
+                numbers.Dequeue();
+            }
+            catch
+            {
+                Console.WriteLine("We got an exception");
+            }
+        });
+    }
+
+    [Test]
     public void ArrayCount()
     {
         TurboQueue<int> numbers = new TurboQueue<int>();
@@ -134,8 +203,11 @@ public class Tests
         {
             outputList.Add(number);
         }
-        controlList.Add(3);
-        outputList.Add(numbers.Count);
-        Assert.That(outputList, Is.EqualTo(controlList));
+        
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(numbers.Count, Is.EqualTo(3));
+        });
     }
 }

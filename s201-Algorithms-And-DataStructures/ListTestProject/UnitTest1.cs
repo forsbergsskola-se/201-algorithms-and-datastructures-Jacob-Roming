@@ -114,6 +114,49 @@ public class Tests
         }
         Assert.That(outputList, Is.EqualTo(controlList));
     }
+    [Test]
+    public void ClearTest()
+    {
+        TurboLinkedList<int> testList = new TurboLinkedList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        testList.Add(30);
+        testList.Add(40);
+        testList.Add(50);
+
+        testList.Clear();
+        
+        
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(testList.Contains(50), Is.EqualTo(false));
+            Assert.That(testList.Count, Is.EqualTo(0));
+        });
+    }
+
+    [Test]
+    public void AddRangeTest()
+    {
+        TurboLinkedList<int> testList = new TurboLinkedList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        controlList.Add(30);
+        controlList.Add(40);
+        controlList.Add(50);
+        testList.AddRange(controlList);
+
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
+        Assert.That(outputList, Is.EqualTo(controlList));
+    }
     
      [Test]
     public void UnlinkedIndexofTest()
@@ -168,7 +211,7 @@ public class Tests
         outputList.Add(testList.IndexOf(50));
         outputList.Add(testList.IndexOf(30));
         outputList.Add(testList.IndexOf(10));
-        foreach (var variable in testList)
+        foreach (var variable in testList.ToArray())
         {
             testList.Remove(variable);
         }
@@ -219,6 +262,50 @@ public class Tests
             outputList.Add(variable);
         }
         Assert.That(outputList, Is.EqualTo(controlList));
+    }
+    
+    [Test]
+    public void UnlinkedAddRangeTest()
+    {
+        TurboList<int> testList = new TurboList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        controlList.Add(30);
+        controlList.Add(40);
+        controlList.Add(50);
+        testList.AddRange(controlList);
+
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
+        Assert.That(outputList, Is.EqualTo(controlList));
+    }
+    
+    [Test]
+    public void UnlinkedClearTest()
+    {
+        TurboLinkedList<int> testList = new TurboLinkedList<int>();
+        List<int> controlList = new List<int>();
+        List<int> outputList = new List<int>();
+        testList.Add(30);
+        testList.Add(40);
+        testList.Add(50);
+
+        testList.Clear();
+        
+        
+        foreach (var variable in testList)
+        {
+            outputList.Add(variable);
+        }
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(outputList, Is.EqualTo(controlList));
+            Assert.That(testList.Contains(50), Is.EqualTo(false));
+            Assert.That(testList.Count, Is.EqualTo(0));
+        });
     }
     
     

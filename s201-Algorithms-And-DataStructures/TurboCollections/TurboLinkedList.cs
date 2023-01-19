@@ -75,6 +75,7 @@ public class TurboLinkedList<T> : ITurboList<T> {
     public void Clear()
     {
         FirstNode = null;
+        Count = 0;
     }
 
     public void RemoveAt(int index)
@@ -107,18 +108,21 @@ public class TurboLinkedList<T> : ITurboList<T> {
         Node targetNode = FirstNode;
         for (int i = 0; i < Count; i++)
         {
-            if (targetNode.Value != null)
+            if (targetNode != null)
             {
-                if (targetNode.Value.Equals(item))
+                if (targetNode.Value != null)
                 {
-                    return true;
+                    if (targetNode.Value.Equals(item))
+                    {
+                        return true;
+                    }
+
                 }
-                    
-            }
-            
-            if (targetNode.Next != null)
-            {
-                targetNode = targetNode.Next;
+
+                if (targetNode.Next != null)
+                {
+                    targetNode = targetNode.Next;
+                }
             }
         }
 
@@ -290,7 +294,4 @@ public interface ITurboList<T> : IEnumerable<T> {
     void Remove(T item);
     // adds multiple items ad the end of this list at once. Works similar to Add.
     void AddRange(IEnumerable<T> items);
-    // --------------- important, but difficult ---------------
-    // gets the iterator for this collection. Used by IEnumerable<T>-Interface to support foreach.
-    ///IEnumerator<T> IEnumerable<T>.GetEnumerator();
 }
