@@ -5,28 +5,21 @@ namespace TurboCollections;
 
 public class TurboList<T> : ITurboList<T> {
     // This class is VERY similar to the TurboLinkedStack
-    private T[] values;
+    private T[] values = new T[32];
     // Also, we store the first instead of the last Node. First Come, First Serve.
-
+    private int _size = 32;
 
     public int Count { get; set; }
 
     public void Add(T value){
         // Check out Enqueue in 5.2 TurboLinkedQueue
-        if (values == null)
-        {
-            values = new T[1];
-            values[0] = value;
-            Count++;
-        }
-        else if (values.Length >= Count - 2)
+        if (_size == Count)
         {
             T[] old = values;
-            values = new T[values.Length * 2];
-            for (int i = 0; i < old.Length; i++)
-            {
-                values[i] = old[i];
-            }
+            _size *= 2;
+            values = new T[_size];
+            Array.Copy(old, values, Count);
+           // System.Buffer.BlockCopy(old, 0, values, 0, old.Length);
             values[Count] = value;
             Count++;
         }
@@ -35,7 +28,6 @@ public class TurboList<T> : ITurboList<T> {
             values[Count] = value;
             Count++;
         }
-
     }
 
     T ITurboList<T>.Get(int index)
@@ -115,9 +107,30 @@ public class TurboList<T> : ITurboList<T> {
 
     public void AddRange(IEnumerable<T> items)
     {
+        
         foreach (var variable in items)
         {
             Add(variable);
+        }
+
+        return;
+        
+        int numberOfElements = values.Length;
+        foreach (var VARIABLE in items)
+        {
+            numberOfElements++;
+        }
+        
+        if (values.Length < numberOfElements)
+        {
+            T[] old = values;
+            values = new T[numberOfElements];
+            System.Buffer.BlockCopy(old, 0, values, 0, old.Length);
+        }
+        foreach (var variable in items)
+        {
+            values[Count] = variable;
+            Count++;
         }
     }
 

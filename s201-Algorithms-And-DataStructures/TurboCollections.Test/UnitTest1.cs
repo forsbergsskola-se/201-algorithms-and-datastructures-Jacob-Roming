@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace TurboCollections.Test;
 
 
@@ -287,4 +289,6 @@ public class MathsTests
         
         Assert.That(controlList, Is.EqualTo(stackOutput));
     }
+
+    
 }
