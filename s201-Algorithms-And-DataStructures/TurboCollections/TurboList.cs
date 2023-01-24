@@ -134,7 +134,7 @@ public class TurboList<T> : ITurboList<T> {
         }
     }
 
-    T Get(int index)
+    public T Get(int index)
     {
         if (index < Count)
         {

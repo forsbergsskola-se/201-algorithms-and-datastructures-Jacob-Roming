@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyQueue", "SpotifyQueu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManager", "CustomerManager\CustomerManager.csproj", "{4E22B497-DD71-4968-987D-664ECFDD1B84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingTests", "SortingTests\SortingTests.csproj", "{CFAC55FB-FAEF-4D4D-89AB-A7312A94DADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fibonacci", "fibonacci\fibonacci.csproj", "{67933434-16B7-408A-84D8-E429023D76FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTest", "SearchTest\SearchTest.csproj", "{83C3C58B-F063-43BE-8075-621D1725894A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +66,17 @@ Global
 		{4E22B497-DD71-4968-987D-664ECFDD1B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E22B497-DD71-4968-987D-664ECFDD1B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E22B497-DD71-4968-987D-664ECFDD1B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAC55FB-FAEF-4D4D-89AB-A7312A94DADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAC55FB-FAEF-4D4D-89AB-A7312A94DADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAC55FB-FAEF-4D4D-89AB-A7312A94DADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAC55FB-FAEF-4D4D-89AB-A7312A94DADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67933434-16B7-408A-84D8-E429023D76FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67933434-16B7-408A-84D8-E429023D76FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67933434-16B7-408A-84D8-E429023D76FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67933434-16B7-408A-84D8-E429023D76FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C3C58B-F063-43BE-8075-621D1725894A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C3C58B-F063-43BE-8075-621D1725894A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C3C58B-F063-43BE-8075-621D1725894A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C3C58B-F063-43BE-8075-621D1725894A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
