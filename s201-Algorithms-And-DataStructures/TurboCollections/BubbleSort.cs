@@ -1,8 +1,8 @@
 ﻿namespace TurboCollections;
 
-public partial class TurboSort
+public static partial class TurboSort
 {
-    public static void BubbleSort(TurboList<int> list)
+    public static void BubbleSort(IList<IComparable> list)
     {
         bool noSwapsThisLoop = true;
         do
@@ -11,11 +11,11 @@ public partial class TurboSort
             
             for (int i = 0; i < list.Count - 1; i++)
             {
-                if (list.Get(i) > list.Get(i + 1))
+                if (list[i].CompareTo(list[i+1]) > 0)
                 {
-                    int temp = list.Get(i + 1);
-                    list.Set(i+1,list.Get(i));
-                    list.Set(i,temp);
+                    IComparable temp = list[i+1];
+                    list[i+1] = list[i];
+                    list[i] = temp;
                     noSwapsThisLoop = false;
                 }
             }

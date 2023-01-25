@@ -1,6 +1,6 @@
 ﻿namespace TurboCollections;
 
-public partial class TurboSort
+public static partial class TurboSort
 {
     
 

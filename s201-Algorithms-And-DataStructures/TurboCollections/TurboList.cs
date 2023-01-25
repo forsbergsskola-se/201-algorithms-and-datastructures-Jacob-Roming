@@ -3,13 +3,20 @@ using System.Collections;
 
 namespace TurboCollections;
 
-public class TurboList<T> : ITurboList<T> {
+public class TurboList<T> : ITurboList<T>, IList<T> {
     // This class is VERY similar to the TurboLinkedStack
     private T[] values = new T[32];
     // Also, we store the first instead of the last Node. First Come, First Serve.
     private int _size = 32;
 
+    bool ICollection<T>.Remove(T item)
+    {
+        Remove(item);
+        return true;
+    }
+
     public int Count { get; set; }
+    public bool IsReadOnly { get; }
 
     public void Add(T value){
         // Check out Enqueue in 5.2 TurboLinkedQueue
@@ -45,6 +52,11 @@ public class TurboList<T> : ITurboList<T> {
         values = null;
     }
 
+    public void Insert(int index, T item)
+    {
+        throw new NotImplementedException();
+    }
+
     public void RemoveAt(int index)
     {
         for (int i = index; i < Count - 1; i++)
@@ -53,6 +65,15 @@ public class TurboList<T> : ITurboList<T> {
         }
 
         Count--;
+    }
+
+    public T this[int index]
+    {
+        get => Get(index);
+        set
+        { 
+            values[index] = value;
+        }
     }
 
     public bool Contains(T item)
@@ -71,6 +92,12 @@ public class TurboList<T> : ITurboList<T> {
         }
 
         return false;
+    }
+
+    public void CopyTo(T[] array, int arrayIndex)
+    {
+        for (int i = 0; i < Count; ++i)
+            array.SetValue(this[i], i + arrayIndex);
     }
 
     public int IndexOf(T item)

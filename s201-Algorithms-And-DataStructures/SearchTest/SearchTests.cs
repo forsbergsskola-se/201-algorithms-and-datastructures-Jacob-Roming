@@ -41,8 +41,28 @@ public class Tests
         {
             Assert.That(TurboSearch.BinarySearch(testList, 99), Is.EqualTo(99));
             Assert.That(TurboSearch.BinarySearch(testList, 0), Is.EqualTo(0));
-            Assert.That(TurboSearch.BinarySearch(testList, -5), Is.EqualTo(null));
-            Assert.That(TurboSearch.BinarySearch(testList, 100), Is.EqualTo(null));
+            Assert.That(TurboSearch.BinarySearch(testList, -5), Is.EqualTo(-1));
+            Assert.That(TurboSearch.BinarySearch(testList, 100), Is.EqualTo(-1));
+        });
+    }
+    
+    [Test]
+    public void TryToFindSomethingThatDoesntExist()
+    {
+        TurboList<IComparable?> testList = new TurboList<IComparable?>();
+        for (int i = 0; i < 100; i++)
+        {
+            if (i != 43)
+            {
+                testList.Add(i);
+            }
+        }
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(TurboSearch.BinarySearch(testList, 43), Is.EqualTo(-1));
+            Assert.That(TurboSearch.BinarySearch(testList, 55), Is.EqualTo(54));
+            Assert.That(TurboSearch.BinarySearch(testList, 22), Is.EqualTo(22));
         });
     }
 }

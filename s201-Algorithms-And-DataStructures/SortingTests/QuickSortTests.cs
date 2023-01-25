@@ -7,7 +7,7 @@ public class QuickSortTests
     [Test]
     public void SortTest()
     {
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         testList.Add(40);
         testList.Add(2);
         testList.Add(999);
@@ -28,14 +28,14 @@ public class QuickSortTests
     [Test]
     public void SortTestHugeList()
     {
-        TurboList<int> testList = new TurboList<int>();
-        for (int i = 10_000; i > -1; i--)
+        TurboList<IComparable> testList = new TurboList<IComparable>();
+        for (int i = 100_000_000; i > -1; i--)
         {
             testList.Add(i);
         }
         TurboSort.QuickSort(testList, 0, testList.Count - 1);
         TurboList<int> controlList = new TurboList<int>();
-        for (int i = 0; i < 10_001; i++)
+        for (int i = 0; i < 100_000_001; i++)
         {
             controlList.Add(i);
         }
@@ -45,7 +45,7 @@ public class QuickSortTests
     [Test]
     public void SortTestEmptyList()
     {
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         TurboSort.QuickSort(testList,0,0);
         TurboList<int> controlList = new TurboList<int>();
         Assert.That(testList, Is.EqualTo(controlList));
@@ -54,7 +54,7 @@ public class QuickSortTests
     [Test]
     public void SortTestSingleValue()
     {
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         testList.Add(40);
         TurboSort.QuickSort(testList,0,testList.Count - 1);
         TurboList<int> controlList = new TurboList<int>();
@@ -65,7 +65,7 @@ public class QuickSortTests
     [Test]
     public void SortTestShortList()
     {
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         testList.Add(40);
         testList.Add(2);
         TurboSort.QuickSort(testList,0, testList.Count - 1);

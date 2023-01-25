@@ -1,8 +1,8 @@
 ﻿namespace TurboCollections;
 
-public partial class TurboSort
+public static partial class TurboSort
 {
-    public static void QuickSort(TurboList<int> input, int left, int right)
+    public static void QuickSort(IList<IComparable> input, int left, int right)
     {
         if (input.Count == 0)
         {
@@ -10,23 +10,21 @@ public partial class TurboSort
         }
         int leftIndex = left;
         int rightIndex = right;
-        int pivot = input.Get(left);
+        IComparable pivot = input[(left+right) / 2];
         while (leftIndex <= rightIndex)
         {
-            while (input.Get(leftIndex) < pivot)//How does this avoid index out of bounds?
+            while (input[leftIndex].CompareTo(pivot) < 0)//How does this avoid index out of bounds?
             {
                 leftIndex++;
             }
         
-            while (input.Get(rightIndex) > pivot) //Same for this, it makes no sense
+            while (input[rightIndex].CompareTo(pivot) > 0) //Same for this, it makes no sense
             {
                 rightIndex--;
             }
             if (leftIndex <= rightIndex)
             {
-                int temp = input.Get(leftIndex);
-                input.Set(leftIndex, input.Get(rightIndex));
-                input.Set(rightIndex, temp);
+                (input[leftIndex], input[rightIndex]) = (input[rightIndex], input[leftIndex]);
                 leftIndex++;
                 rightIndex--;
             }

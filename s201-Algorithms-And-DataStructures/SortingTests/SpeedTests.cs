@@ -10,7 +10,7 @@ public class SpeedTests
     {
         Stopwatch timer = new Stopwatch();
         
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         for (int i = 10_000; i > -1; i--)
         {
             testList.Add(i);
@@ -22,7 +22,7 @@ public class SpeedTests
         timer.Reset();
         
         
-        TurboList<int> quickList = new TurboList<int>();
+        TurboList<IComparable> quickList = new TurboList<IComparable>();
         for (int i = 10_000; i > -1; i--)
         {
             quickList.Add(i);
@@ -39,7 +39,7 @@ public class SpeedTests
     public void SortTest()
     {
         Stopwatch timer = new Stopwatch();
-        TurboList<int> testList = new TurboList<int>();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
         timer.Start();
         for (int i = 0; i < 100; i++)
         {
@@ -49,7 +49,7 @@ public class SpeedTests
             testList.Add(-5);
             testList.Add(50);
             testList.Add(5);
-            TurboSort.QuickSort(testList, 0, testList.Count - 1);
+            //TurboSort.QuickSort(testList, 0, testList.Count - 1);
         }
 
         timer.Stop();
@@ -58,7 +58,7 @@ public class SpeedTests
         timer.Start();
         for (int i = 0; i < 100; i++)
         {
-            TurboList<int> controlList = new TurboList<int>();
+            TurboList<IComparable> controlList = new TurboList<IComparable>();
             testList.Add(40);
             testList.Add(2);
             testList.Add(999);
