@@ -49,7 +49,7 @@ public class SpeedTests
             testList.Add(-5);
             testList.Add(50);
             testList.Add(5);
-            //TurboSort.QuickSort(testList, 0, testList.Count - 1);
+            TurboSort.QuickSort(testList, 0, testList.Count - 1);
         }
 
         timer.Stop();
@@ -73,4 +73,34 @@ public class SpeedTests
         timer.Reset();
         Assert.AreEqual(firstResult, secondResult, 0);
     }
+    
+    
+    [Test]
+    public void RandomSortTest()
+    {
+        Stopwatch timer = new Stopwatch();
+        TurboList<IComparable> testList = new TurboList<IComparable>();
+        TurboList<IComparable> controlList = new TurboList<IComparable>();
+        Random rand = new Random();
+        timer.Start();
+        for (int i = 0; i < 1_000; i++)
+        {
+            int number = rand.Next(0, 1000000);
+            testList.Add(number);
+            controlList.Add(number);
+        }
+        timer.Start();
+        TurboSort.QuickSort(testList,0,testList.Count - 1);
+        timer.Stop();
+        long firstResult = timer.ElapsedMilliseconds;
+        timer.Reset();
+        timer.Start();
+        TurboSort.BubbleSort(controlList);
+        timer.Stop();
+        long secondResult = timer.ElapsedMilliseconds;
+        timer.Reset();
+        Assert.AreEqual(firstResult, secondResult, 0);
+    }
+    
+    
 }
