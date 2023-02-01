@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fibonacci", "fibonacci\fibo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTest", "SearchTest\SearchTest.csproj", "{83C3C58B-F063-43BE-8075-621D1725894A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeTests", "TreeTests\TreeTests.csproj", "{A6CFE740-D3B4-430F-85AB-0FC9D403A355}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{83C3C58B-F063-43BE-8075-621D1725894A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C3C58B-F063-43BE-8075-621D1725894A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C3C58B-F063-43BE-8075-621D1725894A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
