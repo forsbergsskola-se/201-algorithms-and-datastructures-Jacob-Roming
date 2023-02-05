@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTest", "SearchTest\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeTests", "TreeTests\TreeTests.csproj", "{A6CFE740-D3B4-430F-85AB-0FC9D403A355}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTests", "HashTests\HashTests.csproj", "{64CEB30E-DCB1-4128-A102-5E01AD674A18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6CFE740-D3B4-430F-85AB-0FC9D403A355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CEB30E-DCB1-4128-A102-5E01AD674A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CEB30E-DCB1-4128-A102-5E01AD674A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CEB30E-DCB1-4128-A102-5E01AD674A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CEB30E-DCB1-4128-A102-5E01AD674A18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

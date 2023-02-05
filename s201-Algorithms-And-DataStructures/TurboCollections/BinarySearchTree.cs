@@ -23,19 +23,12 @@ public class BinarySearchTree<T> : IEnumerable<T> where T: IComparable
     
     public bool DeleteValue(T value)
     {
-        int index = FindValue(value);
+        int index = Search(value);
         if (index == -1)
         {
             return false;
         }
-
-        /*var leave = GetRightChild(index);
-        while (isActive(GetLeftChild(leave)) != -1)
-        {
-            leave = GetLeftChild(leave);
-        }*/
         
-        // now, you found the left leave and can use that node to reconnect everything
 
         isActive[index] = false;
         TurboList<T> toBeReadded = new TurboList<T>();
@@ -50,13 +43,13 @@ public class BinarySearchTree<T> : IEnumerable<T> where T: IComparable
 
         foreach (var variable in toBeReadded)
         {
-            AddValue(variable);
+            Insert(variable);
         }
 
         return true;
     }
 
-    public int FindValue(T value)
+    public int Search(T value)
     {
         Node currentValue = GetRoot();
         if (currentValue.GetValue().CompareTo(value) == 0)
@@ -97,24 +90,66 @@ public class BinarySearchTree<T> : IEnumerable<T> where T: IComparable
     private IEnumerable<T> CloneIterrator(Node n)
     {
         yield return n.GetValue();
-        if(n.GetLeftChild().GetActive())
-            CloneIterrator(n.GetLeftChild());
-        if(n.GetRightChild().GetActive())
-            CloneIterrator(n.GetRightChild());
+        if (n.GetLeftChild().GetActive())
+        {
+            foreach (var VARIABLE in  CloneIterrator(n.GetLeftChild()))
+            {
+                yield return VARIABLE;
+            }
+        }
+
+        if (n.GetRightChild().GetActive())
+        {
+            foreach (var VARIABLE in CloneIterrator(n.GetRightChild()))
+            {
+                yield return VARIABLE;
+            }
+        }
     }
+
+    public IEnumerable<T> GetInReverseOrder()
+    {
+        foreach (var VARIABLE in ReverseOrderIterator(GetRoot()))
+        {
+            yield return VARIABLE;
+        }
+    }
+
+    public IEnumerable<T> ReverseOrderIterator(Node n)
+    {
+        
+        if (n.GetRightChild().GetActive())
+        {
+            foreach (var VARIABLE in ReverseOrderIterator(n.GetRightChild()))
+            {
+                yield return VARIABLE;
+            }
+        }
+        yield return n.GetValue();
+        if (n.GetLeftChild().GetActive())
+        {
+            foreach (var VARIABLE in ReverseOrderIterator(n.GetLeftChild()))
+            {
+                yield return VARIABLE;
+            }
+        }
+        
+    }
+
+   
 
     public BinarySearchTree<T> Clone()
     {
         BinarySearchTree<T> newTree = new BinarySearchTree<T>();
         foreach (var VARIABLE in CloneIterrator(GetRoot()))
         {
-            newTree.AddValue(VARIABLE);
+            newTree.Insert(VARIABLE);
         }
 
         return newTree;
     }
 
-    public void AddValue(T value)
+    public void Insert(T value)
     {
         Node currentValue = GetRoot();
         if (currentValue.GetActive() == false)
@@ -212,9 +247,12 @@ public class BinarySearchTree<T> : IEnumerable<T> where T: IComparable
         return GetEnumerator();
     }
 
-    IEnumerator GetInOrder()
+    IEnumerator<T> GetInOrder()
     {
-        return GetEnumerator();
+        foreach (var VARIABLE in this)
+        {
+            yield return VARIABLE;
+        }
     }
     
     class Enumerator : IEnumerator<T>{
