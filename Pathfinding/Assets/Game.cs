@@ -14,13 +14,7 @@ public class Game : MonoBehaviour
     public event Action<State, int> MultiplayerStateChanged;
     public event Action<State, State, State, State> InitPlayerPositions;
 
-    private Grid grid;
     private bool multiplayer = false;
-
-    public void Start()
-    {
-        grid = FindObjectOfType<Grid>();
-    }
 
     public State Player1Start
     {
@@ -355,7 +349,7 @@ public class Game : MonoBehaviour
         bool foundGoal = false;
         State goal = start; //This is bad, should be changed
 
-        while (nodesToCheck.Count != 0 && numberOfLoops < 100)
+        while (nodesToCheck.Count != 0)
         {
             Debug.Log("Current loop: " + numberOfLoops);
             State currentNode = nodesToCheck.Peek();
@@ -400,24 +394,9 @@ public class Game : MonoBehaviour
                 
             }
 
-            numberOfLoops++;
             nodesToCheck.Dequeue();
         }
-        if (foundGoal)
-        {
-            Debug.Log("We got there");
-            List<State> path = new List<State>();
-            State checkingNode = goal;
-
-                    
-            while (checkingNode.Equals(start) == false)
-            {
-                path.Add(checkingNode);
-                checkingNode = predecessor[checkingNode];
-            }
-            path.Reverse();
-            return predecessor;
-        }
+        
         return predecessor;
     }
 }
