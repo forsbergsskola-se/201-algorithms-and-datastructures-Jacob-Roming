@@ -1,6 +1,6 @@
 # **To open the pathfinding asignment, open the "Pathfinding" folder in unity**
 If youve followed Marcs loom on how to make a pathfinding visualisation in unity (and I know you have) you know how to run the path finding algorithm
-Theyre named "multiplayer" and "random multiplayer"
+Theyre named "multiplayer" and "random multiplayer" in the editor.
 
 
 
@@ -10,14 +10,18 @@ Theyre named "multiplayer" and "random multiplayer"
 
 ## **The problem to be solved**
 The problem that I have set out to solve is one which involves several different player characters on a grid.
-These characters want to meet somewhere, in the most efficient manner possible.
+These characters want to meet somewhere, in the most efficient manner (lowest cost) possible.
 
-The most interesting part of this problem is that there is no defined goal.
+The most interesting part of this problem is that there is no defined goal at the start.
 The pathfinding must be done without a predefined goal, instead the goal is decided *after* the pathing has finished.
 The most efficient place to meet up cant be decided until it is known how difficult it is for each player to navigate to different grid spots.
 
 Some squares on the grid can be completely inaccessible, while others have an above average cost for traversal.
 This needs to be taken into consideration when acessing the most efficent place to meet up at.
+
+## **Real world applications**
+A real life application could be for an RPG game with a grid system where you want characters to meet up for a cuscene or the like.
+Or perhaps if you have several NPCs who are supposed to travel around the gameworld in a group, that have become scattered for some reason and need to meet up again.
 
 
 ## **Potential approaches**
@@ -40,7 +44,7 @@ But this would significantly increase code complexity and would not solve the pr
 
 Another problem that might arrise is that the algorithm will never find the node that is actually the most efficent meeting spot. 
 This is because the algorithm simpy tries to travel between each player as efficently as possible, so many nodes will never be visited and evaluated.
-This problem will get worse the larger and more complex the map is.
+This problem will get worse the larger and more complex (lots of winding paths and warrying node costs) the map is.
 
 ### **The chosen solution**
 The solution I decided to go with is an algorithm that visits every node for each player.
@@ -52,7 +56,7 @@ Since paths are saved in such a way that nodes simply remember which previous no
 This also means that the pathfinding algorithm does not need to know which node is the most efficient to meet up at, it simply stores the most efficent path to all nodes.
 
 One downside of the current structure is that the cost of traveling to a node for a certain player is stored in the node itself and not in the player.
-This makes the node dependant on players and vice versa in a way that generaly should be avoided. But in its current state the program works and Im lazy, so hey ho.
+This makes the node dependant on players and vice versa in a way that is unecessary and should be avoided. But in its current state the program works and Im lazy, so hey ho.
 
 
 
