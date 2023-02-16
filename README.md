@@ -1,4 +1,11 @@
 # **To open the pathfinding asignment, open the "Pathfinding" folder in unity**
+If youve followed Marcs loom on how to make a pathfinding visualisation in unity (and I know you have) you know how to run the path finding algorithm
+Theyre named "multiplayer" and "random multiplayer"
+
+
+
+
+# **Asigment documentation**
 
 
 ## **The problem to be solved**
@@ -44,6 +51,8 @@ It is also guaranteed to always find the ideal meetup point in every situation t
 Since paths are saved in such a way that nodes simply remember which previous node was the most efficent way to reach it the most efficent path to every node on the map is stored in an efficent and easily accesible way.
 This also means that the pathfinding algorithm does not need to know which node is the most efficient to meet up at, it simply stores the most efficent path to all nodes.
 
+One downside of the current structure is that the cost of traveling to a node for a certain player is stored in the node itself and not in the player.
+This makes the node dependant on players and vice versa in a way that generaly should be avoided. But in its current state the program works and Im lazy, so hey ho.
 
 
 
