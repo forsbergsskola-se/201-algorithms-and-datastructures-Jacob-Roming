@@ -30,6 +30,8 @@ The easiest solution would be to simply set an abitrary location to meet up (pre
 The obvious problem here would be that the selected goal would very rarely be the most efficient place to meet up, so the failure rate would be very high.
 Upsides would be a potentially low usage of computer resources.
 
+Thus this approach can be considered to be equal to NoSort or BogoPath.
+
 ### **Knowing where to meet up**
 To make an actual effort to find the most efficent node to meet up on the cost to travel to a node needs to be saved, once for each player.
 We can then add the cost of each player traveling to the node together to the get total value of how expensive it would be to have every player travel there.
@@ -40,7 +42,7 @@ One possible approach would be to have an A* like algorithm, that searches out a
 Each player would do this once per other player.
 This would lead to poor scaling in situations with many players.
 This problem could be mitigated by not reevaluating paths between pair of players that have already been calculated (but in reverse) by another player.
-But this would significantly increase code complexity and would not solve the problem entirely.
+But this would increase code complexity and would not solve the problem entirely.
 
 Another problem that might arrise is that the algorithm will never find the node that is actually the most efficent meeting spot. 
 This is because the algorithm simpy tries to travel between each player as efficently as possible, so many nodes will never be visited and evaluated.
