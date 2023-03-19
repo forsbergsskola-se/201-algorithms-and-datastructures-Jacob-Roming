@@ -176,8 +176,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285624689
-  m_fontColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+    rgba: 4294952053
+  m_fontColor: {r: 0.45911944, g: 0.769443, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -300,7 +300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b2dec9150cf86ab4c9efa8ff0a9cdb48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -351,4 +351,5 @@ MonoBehaviour:
   sprite: {fileID: 0}
   green: {fileID: 2100000, guid: b5b5d73af79b87e4183cc1923a38e6da, type: 2}
   white: {fileID: 2100000, guid: 2131e9394b63e6945a426070bcd9f39d, type: 2}
-  black: {fileID: 2100000, guid: ebe1608eacd991e45a3c18e77cd7cc71, type: 2}
+  black: {fileID: 2100000, guid: 1198534f884682e42842ddc4619becb1, type: 2}
+  brick: {fileID: 2100000, guid: b2dec9150cf86ab4c9efa8ff0a9cdb48, type: 2}
