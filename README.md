@@ -1,7 +1,21 @@
-# **To open the pathfinding asignment, open the "Pathfinding" folder in unity**
-If youve followed Marcs loom on how to make a pathfinding visualisation in unity (and I know you have) you know how to run the path finding algorithm
-Theyre named "multiplayer" and "random multiplayer" in the editor.
+# **Multi agent pathfinding**
 
+#*Qucik Start Guide*
+Press one of the buttons in the lower lefthand corner to start a path finding scenario and watch the 4 agents travel along their paths.
+The upper button will randomise the positions while the lower one will always show the same scenario.
+
+
+
+
+
+https://user-images.githubusercontent.com/112474358/226186847-0817246c-22b2-44e6-bd3a-f4ec96dfdc9e.mp4
+
+
+![image](https://user-images.githubusercontent.com/112474358/226187027-8f05588a-b1be-4960-aaa9-c66868589914.png)
+
+
+
+![image2](https://user-images.githubusercontent.com/112474358/226187031-9423e613-bec7-451e-95e7-68ec2910502a.png)
 
 
 
