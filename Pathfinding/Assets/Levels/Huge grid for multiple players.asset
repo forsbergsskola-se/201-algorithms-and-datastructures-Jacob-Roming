@@ -1,0 +1,1116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb2adca29a54e429e0c6f09554cc7ee, type: 3}
+  m_Name: Huge grid for multiple players
+  m_EditorClassIdentifier: 
+  Cells:
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 5
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 5
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 0}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 0}
+      m_grid: {fileID: 0}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 0}
+      m_grid: {fileID: 0}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 0
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 1}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 90
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 2}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 2
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 3}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 99
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 4}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 99
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 5}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 50
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 10
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 6}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 7}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 8}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 0, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 1, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 2, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 3, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 0
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 4, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 5, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 6, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 7, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 8, y: 9}
+      m_grid: {fileID: 11400000}
+  - walkable: 1
+    visited: 0
+    cost: 1
+    costPerPlayer:
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    - 3.4028235e+38
+    thisCellsState:
+      playerPosition: {x: 9, y: 9}
+      m_grid: {fileID: 11400000}
+  width: 10
